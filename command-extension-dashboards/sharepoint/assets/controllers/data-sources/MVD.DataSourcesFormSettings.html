@@ -1,0 +1,210 @@
+<div class='flexContainer'>
+    <div class='flexContainer'>
+        <div class='flexItem25Width'>
+            <input id='sourceTitle' />
+        </div>
+        <div id='dataSourcesGroupingFieldWrapper' class='flexItem25Width'>
+            <input id='dataSourcesGroupingField' />
+        </div>
+        <div class="flexItem30Width" style="display: flex; justify-content: flex-end; margin-left: auto">
+            <div style="margin:auto 0"><button id="btnGetSourceData" type="button"></button><button
+                    id="btnAddParameterRowSettings" type="button"></button></div>
+        </div>
+    </div>
+    <div style='min-height: 140px' class='flexContainer'>
+        <div class='flexItem15Width'>
+            <div class='flexContainer'>
+                <input id='sourceType' />
+            </div>
+            <div id='advancedParametersWrapper' class='flexContainer'>
+                <input id='advancedParameters' />
+            </div>
+            <div class='flexContainer'>
+                <input id='internalUse' />
+            </div>
+        </div>
+        <div id='sourceTypeSettings' class='flexItem85Width'>
+            <div class='sharepointDataSource flexContainer'>
+                <div class='flexItem40Width'>
+                    <input id='sharepointDataSource' />
+                </div>
+                <div class='flexItem35Width'>
+                    <input id='sharepointFields' />
+                </div>
+                <div class='flexItem25Width'>
+                    <input id='sharepointLookupFieldsToOpen' />
+                </div>
+                <div class='sharepointAdvancedParameters' style='width: 100%; display: none'>
+                    <textarea id='sharepointQuery'></textarea>
+                </div>
+            </div>
+            <div class='excelDataSource flexContainer' style='display: none'>
+                <div class='flexItem40Width'>
+                    <input id='excelDataSource' />
+                </div>
+                <div class='flexItem15Width'>
+                    <input id='excelSheetSelect' />
+                </div>
+                <div class='flexItem15Width' style='display: flex'>
+                    <div style='margin: auto'>
+                        <input id='excelIndicatorType' />
+                    </div>
+                </div>
+                <div class='flexItem40Width' style="display:none">
+                    <input id='excelFields' />
+                </div>
+            </div>
+            <div class='pivotDataSource flexContainer' style='display: none'>
+                <div class='flexItem50Width'>
+                    <input id='pivotDataSource' />
+                </div>
+                <div class='flexItem15Width'>
+                    <input id='rowsLevel' />
+                </div>
+                <div class='flexItem15Width'>
+                    <input id='columnsLevel' />
+                </div>
+                <input id='pivotSettings' type='hidden' />
+            </div>
+            <div class='complexDataSource flexContainer' style='display: none'>
+                <div class='flexContainer'>
+                    <div class='flexItem50Width'>
+                        <input id='complexDataSource_1' />
+                    </div>
+                    <div class='flexItem15Width'>
+                        <input id='complexDataSourceOperator' />
+                    </div>
+                </div>
+                <div class='flexContainer'>
+                    <div class='flexItem50Width'>
+                        <input id='complexDataSource_2' />
+                    </div>
+                </div>
+                <div class='flexContainer' style='margin-top: 1em'>
+                    <div id='complexConditionsWrapper' class='flexItem50Width'>
+                        <div class='lblSimulate'>Condiciones del operador</div>
+                        <div class='complexConditionRow flexContainer' data-idComplexRow='0'>
+                            <div class='flexItem45Width'>
+                                <input id='complexDataSourceField1_0' />
+                            </div>
+                            <div class='flexItem45Width'>
+                                <input id='complexDataSourceField2_0' />
+                            </div>
+                            <div class='flexItem10Width' style='display:flex'>
+                                <button id="btnAddComplexConditionRow" type="button" style="margin: auto;"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='complexSelectFieldsWrapper' class='flexItem50Width'>
+                        <div class='lblSimulate'>Campos seleccionados</div>
+                        <div class='complexSelectFieldRow flexContainer' data-idComplexRow='0'>
+                            <div class='flexItem50Width'>
+                                <input id='complexSelectField_0' />
+                            </div>
+                            <div class='flexItem30Width' style='padding-top: 3px;'>
+                                <input id='complexSelectFieldLabel_0' />
+                            </div>
+                            <div class='flexItem10Width' style='display:flex'>
+                                <button id="btnAddComplexSelectFieldRow" type="button" style="margin: auto;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='javascriptDataSource flexContainer' style='display: none'>
+                <div class='flexItem50Width'>
+                    <input type='text' id='javascriptDataSource' />
+                </div>
+                <div>
+                    <div>function GetData(sources, parameters) { return new Promise(function(resolve, reject){</div>
+                    <textarea id='jsFunction' rows='10' cols='140'>resolve([]);</textarea>
+                    <div>})}</div>
+                </div>
+                <div>
+                    <div>function GetFields() { return new Promise(function(resolve, reject){</div>
+                    <textarea id='jsFunctionFields' rows='5' cols='140'>resolve([]);</textarea>
+                    <div>})}</div>
+                </div>
+            </div>
+            <div class='externalDataSource flexContainer' style='display: none'>
+                <div class='flexItem50Width'>
+                    <input id='externalDataSourceConnection' />
+                </div>
+                <div data-type='ExternalSharepoint' class='flexContainer' style='display: none'>
+                    <div class='flexItem50Width'>
+                        <input id='externalSharepointSPLists' />
+                        <input id='externalSharepointFields' />
+                        <div class='externalAdvancedParameters' style='width: 100%; display: none'>
+                            <textarea id='externalSharepoinQuery'></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div data-type='DataBaseConnection' class='flexContainer' style='display: none'>
+                    <div class='flexItem60Width' style='display: flex'>
+                        <div class='flexItem40Width'>
+                            <input id='externalDataBaseCommandType' />
+                        </div>
+                        <div id='externalDataBaseStoreProcedureWrapper' class='flexItem60Width' style='display: none'>
+                            <input id='externalDataBaseStoreProcedure' />
+                        </div>
+                    </div>
+                    <div class='flexItem60Width'>
+                        <textarea id='externalDataBaseCommandText'></textarea>
+                        <div id='externalDataBaseFieldsWrapper' style='display: none'>
+                            <input id='externalDataBaseFields' />
+                        </div>
+                    </div>
+                </div>
+                <div data-type='WebService' class='flexContainer' style='display: none'>
+                    <div class='flexItem25Width'>
+                        <input id='webServiceMethod' />
+                    </div>
+                    <div class='flexItem50Width' style='display: flex'>
+                        <div style='margin: auto 0'>
+                            <input id='webServiceReturnRawResponse' />
+                        </div>
+                    </div>
+                    <div class='flexItem50Width'>
+                        <input id='webServiceJsonPath' />
+                    </div>
+                    <div class='flexItem70Width'>
+                        <input id='webServiceFields' />
+                    </div>
+                    <div class='flexItem70Width'>
+                        <div class='lblSimulate'>Headers</div>
+                        <div id='webServiceHeadersWrapper'></div>
+                    </div>
+                    <div class='flexItem70Width'>
+                        <div class='lblSimulate'>Query string params</div>
+                        <div id='webServiceQueryStringParamsWrapper'></div>
+                    </div>
+                    <div class='flexItem70Width'>
+                        <div class='lblSimulate'>Post params</div>
+                        <div id='webServicePostParamsWrapper'> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='commnetsWrapper'>
+
+        </div>
+    </div>
+    <div class='flexContainer'>
+        <div class='lblSimulate'>Parámetros</div>
+        <div id='parameters' class='flexContainer'></div>
+    </div>
+    <div class='lblSimulate'>Vista previa de parámetros y datos</div>
+    <div class='flexContainer flexItem15Width'>
+        <div id='parametersPreView' style='width: 100%'></div>
+    </div>
+    <div class='flexContainer flexItem85Width'>
+        <p id='error' style='width: 100%; display: none'></p>
+        <div id='gridWrapper' style='width: 100%;'>
+        </div>
+        <div id='pivotWrapper' style='width: 100%; display: none'>
+            <div>
+                <div id='pivot'></div>
+            </div>
+        </div>
+    </div>
+</div>

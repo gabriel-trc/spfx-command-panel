@@ -1,0 +1,177 @@
+input[type=button], input[type=reset], input[type=submit], button {
+    min-width: unset !important;
+}
+
+.flexContainer {
+    margin: .5em 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flexItem85Width {
+    width: 84.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem80Width {
+    width: 79.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem75Width {
+    width: 74.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem70Width {
+    width: 69.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem65Width {
+    width: 64.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem60Width {
+    width: 59.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem50Width {
+    width: 49.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem45Width {
+    width: 44.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem40Width {
+    width: 39.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem35Width {
+    width: 34.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem30Width {
+    width: 24.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem25Width {
+    width: 24.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem20Width {
+    width: 19.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem15Width {
+    width: 14.5% !important;
+    margin-right: .5%;
+}
+
+.flexItem10Width {
+    width: 9.5% !important;
+    margin-right: .5%;
+}
+
+.btnWrapper {
+    margin: 5px auto;
+}
+
+.lblSimulate {
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 400;
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+    margin: 8px 0;
+    font-size: 13px;
+    width: 100%;
+}
+
+#parametersPreView {
+    flex-direction: row;
+}
+
+.parameterRow {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.parameterWrapper {
+    width: 99.5% !important;
+    margin-right: .5%;
+}
+
+.parameterCheckbox {
+    width: 110px !important;
+    margin-right: .5%;
+}
+
+.e-delete-icon::before {
+    content: '\e84e';
+}
+
+textarea.e-input, .e-float-input textarea, .e-float-input.e-control-wrapper textarea, .e-input-group textarea, .e-input-group.e-control-wrapper textarea {
+    resize: none;
+}
+
+.deleteIconWrapper {
+    background-color: #d64113;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+}
+
+.deleteIcon {
+    margin: auto;
+    color: white;
+}
+
+    .deleteIcon::before {
+        content: '\e84e';
+    }
+
+.e-export::before {
+    content: '\ec0b';
+}
+
+.e-import::before {
+    content: '\e60f';
+}
+
+.e-gear::before {
+    content: '\e679';
+}
+
+.e-add::before {
+    content: '\e22c';
+}
+
+.e-remove::before {
+    content: '\e22b';
+}
+
+.e-reload::before {
+    content: '\e99d';
+}
+
+#commnetsWrapper{
+    width: 100%;
+}
+
+textarea[id^="Comments_"]{
+    width: 800px;
+    resize: none;
+}

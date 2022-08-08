@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://5mkhk5.sharepoint.com/sites/dev/Lists/DataSources/AllItems.aspx",
+      "customActions": {
+        "4e39e841-1fff-4f91-b44a-60d25754b1c2": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "loaderApplicationExtension": {
+      "pageUrl": "https://5mkhk5.sharepoint.com/sites/dev/Lists/DataSources/AllItems.aspx",
+      "customActions": {
+        "4e39e841-1fff-4f91-b44a-60d25754b1c2": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}

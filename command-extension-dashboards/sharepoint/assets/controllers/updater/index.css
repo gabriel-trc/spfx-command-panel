@@ -1,0 +1,219 @@
+#pageContentTitle {
+    display: none;
+}
+
+.tdFlexContainer {
+  display: flex;
+  flex-direction: row;
+  width: 130px;
+}
+
+.tdFlexContainer:nth-child(even) {
+    margin-top: 5px;
+}
+
+.tdFlexContainer > *{
+    margin:auto
+}
+
+.tdFormInput {
+    display: flex;
+    margin: .4em;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.tdFormTableButton{
+    display: flex;
+    margin: .5em 0;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.tdFormTableButton > label{
+    margin: auto 0;
+}
+
+.tdFormTableButton > button{
+    margin-left: auto;
+}
+
+#zipFilePackageInput, #addPackageFileInput {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.liFileInnerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#customActionScriptSrc {
+    width: 100%;
+}
+
+#packageUpdaterLogConsoleContainer{
+    position: relative;
+    display: flex;
+    width:50%;
+    height: 600px;
+}
+
+#currentSitePackagesTableContainer{
+    min-width: 840px;
+    width: 50%;
+}
+
+#packageUpdaterLogConsole {
+  overflow-y: auto;
+  height: 90%;
+  width: 95%;
+  margin: auto 0 auto auto;
+  padding: 1em;
+  background-color: #222;
+  color: whitesmoke;
+}
+
+#packageUpdaterLogConsoleSpinner{
+  display: none;
+  position: absolute;
+  top: 1em;
+  right: 2em;
+}
+
+#homeNavigationBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #555;
+}
+
+#homeNavigationBar li {
+    float: left;
+}
+
+#homeNavigationBar  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#homeNavigationBar  li a.selectedTab {
+    background-color: #333;
+}
+
+#homeNavigationBar  li a:hover {
+    background-color: #111;
+}
+
+.tdLogPackages{
+    white-space: pre-line;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+select[id^="selectList_"], select[id^="selectListData_"],
+select[id^="selectViews_"], select[id^="selectFields_"],
+select[id^="selectListDataView_"], select[id^="selectListDataViewPrimaryField_"] {
+  max-width:300px
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #a9a9a9;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #a9a9a9;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #a9a9a9;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  

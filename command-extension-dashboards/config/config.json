@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "command-extension-dashboards-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/commandExtensionDashboards/CommandExtensionDashboardsCommandSet.js",
+          "manifest": "./src/extensions/commandExtensionDashboards/CommandExtensionDashboardsCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CommandExtensionDashboardsCommandSetStrings": "lib/extensions/commandExtensionDashboards/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,293 @@
+﻿<div class="flexContainer">
+    <div class="flexItem30Width"><input id="panelTitle" /></div>
+    <div class="flexItem20Width"><input id="panelType" /></div>
+</div>
+<div id="panelTypeSettingsContainer" class="flexContainer">
+    <div class="chartTypeSettings flexContainer">
+        <div class="lblSimulate">Fuentes de datos</div>
+        <div id="gridChartDataSourcesWrapper"></div>
+        <div class="flexContainer">
+            <div class="flexItem25Width"><input id="horizontalName" /></div>
+            <div class="flexItem25Width"><input id="horizontalLabelFormat" /></div>
+            <div class="flexItem25Width"><input id="verticalName" /></div>
+            <div class="flexItem25Width"><input id="verticalLabelFormat" /></div>
+
+        </div>
+        <div class="flexContainer">
+            <div class="flexItem15Width"><input id="sortAxe" /></div>
+            <div class="flexItem15Width" style="display:flex">
+                <div style="margin:auto"><input id="sortDecending" /></div>
+            </div>
+        </div>
+        <div class="lblSimulate seriesChartGrid">Series</div>
+        <div id="seriesChartGridWrapper" class="flexContainer seriesChartGrid"></div>
+        <div class="lblSimulate dynamicSeriesChartGrid" style="visibility: hidden">Series dinamicas</div>
+        <div id="dynamicSeriesChartGridWrapper" class="flexContainer dynamicSeriesChartGrid" style="visibility: hidden">
+        </div>
+    </div>
+
+    <div class="cardTypeSettings flexContainer">
+        <div class="flexItem50Width">
+            <div class="flexContainer">
+                <div class="flexItem50Width"><input id="cardDataSourceName" value="" /></div>
+                <div style="margin: auto 0">
+                    <button type="button" id="btnCardDataSourceSettings" class="e-btn e-small e-info">Configurar
+                        Fuente</button>
+                </div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem40Width"><input type="text" id="cardValueField" /></div>
+                <div class="flexItem60Width"><input type="text" id="cardTypeTemplate" /></div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem20Width"><input type="text" id="cardValueMask" /></div>
+                <!--<div class="flexItem20Width"><div id="cardValueXPosition"></div></div>
+                <div class="flexItem20Width"><div id="cardValueYPosition"></div></div>-->
+                <div class="flexItem20Width"><input type="text" id="cardValueColorType" /></div>
+                <div class="flexItem20Width cardValueColorPickerWrapper" style="visibility: hidden; display: flex;">
+                    <div style="margin: auto"><input type="text" id="cardValueColorPicker" /></div>
+                </div>
+            </div>
+            <div class="flexContainer" id="colorCardTypeRanges"></div>
+        </div>
+        <div class="flexItem50Width" style="visibility: hidden; display: flex;">
+            <div id="cardWrapper">
+                <div id="card"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gridTypeSettings flexContainer">
+        <div class="flexItem30Width" style="display: flex">
+            <input id="gridDataSourceName" value="" />
+            <div style="margin: auto 0">
+                <button type="button" id="btnGridDataSourceSettings" class="e-btn e-small e-info">Configurar
+                    Fuente</button>
+            </div>
+        </div>
+        <div class="flexItem20Width" id="btnGridColumnsSettingsWrapper" style="display:none">
+            <div style="margin: auto 0">
+                <button type="button" id="btnGridColumnsSettings" class="e-btn e-small e-info">Configurar
+                    Columnas</button>
+            </div>
+        </div>
+        <div id="gridWrapper" style="width:100%"></div>
+    </div>
+
+    <div class="gaugeTypeSettings flexContainer">
+        <div class="flexItem60Width">
+            <div class="flexContainer">
+                <div class="flexItem50Width"><input id="gaugeDataSourceName" value="" /></div>
+                <div style="margin: auto 0">
+                    <button type="button" id="btnGaugeDataSourceSettings" class="e-btn e-small e-info">Configurar
+                        Fuente</button>
+                </div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem50Width"><input type="text" id="gaugeValueField" /></div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem50Width"><input type="text" id="gaugeType" /></div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem25Width" data-gaugeType="circularGauge"><input type="text"
+                        id="gaugeCircularStartAngle" /></div>
+                <div class="flexItem25Width" data-gaugeType="circularGauge"><input type="text"
+                        id="gaugeCircularEndAngle" /></div>
+                <div class="flexItem20Width" data-gaugeType="circularGauge"><input type="text" id="rangeColorRadius" />
+                </div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem30Width"><input type="text" id="gaugePointerType" /></div>
+                <div class="flexItem20Width gaugePointerSettings" data-gaugeType="linearGauge" style="display: none">
+                    <input type="text" id="gaugeLinearOrientation" /></div>
+                <div class="flexItem20Width gaugePointerSettings" data-gaugeType="circularGauge"><input type="text"
+                        id="gaugePointerRadius" /></div>
+                <div class="flexItem25Width gaugePointerSettings"><input type="text" id="gaugePointerColorType" /></div>
+                <div class="flexItem25Width gaugePointerSettings gaugePointerColorPickerWrapper"
+                    style="visibility:hidden; display:flex;">
+                    <div style="margin:auto"><input type="text" id="gaugePointerColorPicker" /></div>
+                </div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem20Width" style="display: flex">
+                    <div style="margin: auto"><input type="text" id="gaugeShowValue" /></div>
+                </div>
+                <div class="flexItem20Width  gaugeShowValueSettings"><input type="text" id="gaugeValueMask" /></div>
+                <div class="flexItem20Width  gaugeShowValueSettings"><input type="text" id="gaugeValuePosition" /></div>
+                <div class="flexItem20Width  gaugeShowValueSettings"><input type="text" id="gaugeValueColorType" />
+                </div>
+                <div class="flexItem20Width  gaugeShowValueSettings gaugeValueColorPickerWrapper"
+                    style="visibility: hidden; display: flex;">
+                    <div style="margin: auto"><input type="text" id="gaugeValueColorPicker" /></div>
+                </div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem20Width" style="display: flex">
+                    <div style="margin: auto"><input type="text" id="gaugeShowScale" /></div>
+                </div>
+                <div class="flexItem20Width gaugeShowScaleSettings">
+                    <div class="colorPickerWrapper"><label>Color</label><input type="text" id="gaugeScaleColor" /></div>
+                </div>
+                <div class="flexItem20Width gaugeShowScaleSettings"><input type="text" id="axeStartValue" /></div>
+                <div class="flexItem20Width gaugeShowScaleSettings"><input type="text" id="axeEndValue" /></div>
+                <div class="flexItem20Width" style="display: flex">
+                    <div style="margin: auto"><input type="text" id="gaugeGreyRangeColor" /></div>
+                </div>
+            </div>
+            <div class="flexContainer" id="colorGaugeTypeRanges"></div>
+        </div>
+
+        <div class="flexItem40Width">
+            <div id="gaugeWrapper">
+                <div id="gauge"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pivotTypeSettings flexContainer">
+        <div class="flexItem30Width" style="display:flex">
+            <input id="pivotDataSourceName" value="" />
+            <div style="margin: auto 0">
+                <button type="button" id="btnPivotDataSourceSettings" class="e-btn e-small e-info">Configurar
+                    Fuente</button>
+            </div>
+        </div>
+        <div id="pivotWrapper" style="height:500px; width:100%;">
+            <div>
+                <div id="pivot"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mapTypeSettings flexContainer">
+        <div class="flexItem50Width">
+            <div class="flexContainer">
+                <div class="flexItem30Width">
+                    <input id="selectMap" value="" />
+                </div>
+                <div id="selectCountryOrContinetnWrapper" class="flexItem30Width">
+                    <input id="selectCountryOrContinetn" value="" />
+                </div>
+            </div>
+            <div class="flexContainer">
+                <div class="flexItem25Width" style="display: none">
+                    <div style="margin: auto 0">
+                        <input id="openStreetCheckBox" value="" />
+                    </div>
+                </div>
+                <div class="flexItem25Width">
+                    <input id="initLatitude" value="" />
+                </div>
+                <div class="flexItem25Width">
+                    <input id="initLongitude" value="" />
+                </div>
+                <div class="flexItem25Width">
+                    <input id="initZoom" value="" />
+                </div>
+            </div>
+            <div class="flexContainer">
+                <input id="addLocatorsCheckBox" />
+                <input type="hidden" id="locatorsSettings"
+                    value="{ &quot;settings&quot;: {}, &quot;show&quot;: false }" />
+                <div id="btnLocatorsDataSourceSettingsWrapper" style="visibility: hidden">
+                    <button type="button" id="btnLocatorsDataSourceSettings" class="e-btn e-small e-info">Configurar
+                        Fuente</button>
+                </div>
+                <div class="flexContainer" id="locatorsSettingsWrapper" style="display: none">
+                    <div class="flexItem30Width">
+                        <input id="locatorFieldTitle" value="" />
+                    </div>
+                    <div class="flexItem30Width">
+                        <input id="locatorFieldsTooltip" value="" />
+                    </div>
+                    <div class="flexItem30Width">
+
+                    </div>
+                    <div class="flexItem30Width">
+                        <input id="locatorFieldLongitude" value="" />
+                    </div>
+                    <div class="flexItem30Width">
+                        <input id="locatorFieldLatitude" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="flexContainer">
+                <input id="addColorsCheckBox" />
+                <input type="hidden" id="colorsSettings"
+                    value="{ &quot;settings&quot;: {}, &quot;show&quot;: false }" />
+                <div id="btnColorsDataSourceSettingsWrapper" style="visibility: hidden">
+                    <button type="button" id="btnColorsDataSourceSettings" class="e-btn e-small e-info">Configurar
+                        Fuente</button>
+                </div>
+                <div class="flexContainer" id="colorsSettingsWrapper" style="display: none">
+                    <div class="flexItem30Width">
+                        <input id="colorFieldTitle" value="" />
+                    </div>
+                    <div class="flexItem30Width">
+                        <input id="colorFieldsTooltip" value="" />
+                    </div>
+                    <div class="flexItem30Width">
+                        <input id="colorFieldRegion" value="" />
+                    </div>
+                    <div class="flexItem30Width">
+                        <input id="colorFieldType" value="" />
+                    </div>
+                    <div class="flexItem30Width">
+                        <input id="colorFieldValue" value="" />
+                    </div>
+                    <div class="flexContainer">
+                        <div>Rango de colores</div>
+                    </div>
+                    <div class="flexContainer" id="colorMapTypeRanges">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flexItem50Width">
+            <div id="mapWrapper" style="height: 500px">
+                <div id="map"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="indicatorsPanelTypeSettings flexContainer">
+        <div class="flexItem30Width" style="display: flex">
+            <input id="indicatorsPanelGroupName" value="" />
+            <div style="margin: auto 0">
+                <button type="button" id="btnIndicatorsPanelDataSourceSettings" class="e-btn e-small e-info">Configurar
+                    Fuente</button>
+            </div>
+        </div>
+        <div class="flexContainer">
+            <div class="flexItem40Width" style="display: flex">
+                <input id="indicatorPanelShowDataType" value="" />
+            </div>
+            <div class="flexItem30Width" style="display:flex">
+                <div style="margin:auto">
+                    <input id="indicatorsPanelsShowYTDColumn" />
+                </div>
+            </div>
+            <div id="indicatorsPanelGroupWrapper" class="flexItem30Width" style="display: none">
+                <div style="margin: auto 0">
+                    <button type="button" id="btnAddIndicatorsPanelGroup"
+                        class="e-btn e-small e-success">AGRUPAR</button>
+                </div>
+                <div style="margin: auto 0">
+                    <button type="button" id="btnIndicatorPanelGroupLevel1" data-level="Level1"
+                        class="e-btn e-small e-info">RESPONSABLE</button>
+                </div>
+            </div>
+        </div>
+        <div id="dashboardIndicatorPanelPreviewWrapper" style="width: 100%">
+            <div style="margin-top: 1em; width: 100%" id="dashboardIndicatorPanelPreview"></div>
+        </div>
+        <input type="hidden" id="indicatorPanelGroupSettings" value="" />
+    </div>
+</div>
+
+
+<input type="hidden" id="dataSourcesSettings" value="" />

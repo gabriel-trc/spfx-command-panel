@@ -1,0 +1,55 @@
+﻿<div class="flexContainer">
+    <div class="flexItem50Width" id="sourceSelectorWrapper" style="display: flex">
+        <div class="flexItem25Width"><input id="sourceType" /></div>
+        <div class="flexItem75Width"><input id="source" /></div>
+    </div>
+    <div class="flexItem50Width" id="indicatorsPanelSelectorWrapper" style="display: none">
+        <div class="flexItem25Width"><input id="indicatorsPanelSelectorType" /></div>
+        <div class="flexItem75Width" style="display: flex">
+            <div id="indicatorsPanelIndicatorSelectorWrapper" style="width: 100%;"><input id="indicatorsPanelIndicatorSelector" /></div>
+            <div id="indicatorsPanelResponsibleSelectorWrapper" style="width: 100%; display: none; flex-direction: column">
+                <label style="color: rgba(0, 0, 0, 0.54); fontSize: 13px">Responsables</label>
+                <div id="indicatorsPanelResponsibleSelector" style="margin: auto 0"></div>
+            </div>
+        </div>
+    </div>
+    <div class="flexItem50Width" style="display: flex">
+        <div id="buttonsResumeDataWrapper" style="margin: auto 0; display: none">
+            <button id="btnResumeData" type="button" class="e-btn e-info e-small" style="margin-right: 1em;" onclick="MVD.Dashboards.UI.openResumeDataSettingsDialog()">Resumir datos</button>
+            <button id="btnRemoveResumeData" type="button" class="e-btn e-warning e-small" onclick="MVD.Dashboards.UI.removeResumeDataSettings()" style="visibility: hidden">Quitar resumen</button>
+        </div>
+        <div id="indicatorPlanParameterWrapper" style="display: none; width: 100%">
+            <div class="flexItem40Width">
+                <input id="indicatorParameterType" />
+            </div>
+            <div class="flexItem60Width">
+                <div data-parameter-type="indicatorPlanParameter">
+                    <input type="text" id="indicatorPlanParameterName" />
+                </div>
+                <div data-parameter-type="existParameter" style="display: none">
+                    <input id="indicatorExistingParameterSelector" />
+                </div>
+            </div>
+        </div>
+        <div id="indicatorSheetTypeWrapper" class="flexItem75Width" style="display: none">
+            <input id="indicatorSheet" />
+        </div>
+    </div>
+
+</div>
+<div class="lblSimulate parametersGrid">Parámetros</div>
+<div id="parametersGridWrapper" class="parametersGrid" style="min-height: 330px"></div>
+<div class="flexContainer">
+    <div id="detailsDataSettingsWrapper" class="flexContainer flexItem25Width" style="visibility: hidden">
+        <div id="btnDetailsDataSettingsWrapper"><button type="button" id="btnDetailsDataSettings" class="e-btn e-small e-info" onclick="MVD.Dashboards.UI.openDetailsDataSettingsDialog()">Configurar detalle de datos</button></div>
+    </div>
+    <div id="drillingSettingsWrapper" class="flexContainer flexItem25Width" style="visibility: hidden">
+        <div id="btnDrillingSettingsWrapper"><button type="button" id="btnDrillingSettings" class="e-btn e-small e-info" onclick="MVD.Dashboards.UI.openPanelDrillingSettingsDialog()">Configurar drilling</button></div>
+    </div>
+</div>
+
+
+<input type="hidden" id="drillingSettings" value="" />
+<input type="hidden" id="detailsDataSettings" value="" />
+<input type="hidden" id="resumeDataSettings" value="" />
+<input type="hidden" id="dataSourceId" value="" />

@@ -1,0 +1,166 @@
+<ul id="homeNavigationBar">
+    <li><a id="packageCreator" class="selectedTab" href="#">Creador de paquetes de MVD Quality</a></li>
+    <li><a id="packageUpdater" href="#">Actualizador de paquetes de MVD Quality</a></li>
+    <li><a id="customActionHandler" href="#">Manejo de custom actions</a></li>
+</ul>
+
+<div id="packageCreatorContainer">
+    <h1>Creador de paquetes de MVD Quality</h1>
+
+    <div class="tdFormInput">
+        <label for="packageName">Nombre:</label>
+        <input type="text" id="packageName" />
+    </div>
+    <div class="tdFormInput">
+        <label for="packageVersion">Versión:</label>
+        <input type="number" min="0" step="0.01" id="packageVersion" />
+    </div>
+    <div class="tdFormInput" style="width: 800px !important;">
+        <label for="packageDescription">Descripción:</label>
+        <textarea id="packageDescription" rows="8" cols="100" style="resize:none"></textarea>
+    </div>
+    <div class="tdFormTableButton">
+        <label>Listas:</label><button type="button" id="addListRowBtn">Agregar</button>
+    </div>
+    <table id="listsToExportTable" class="styled-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>URL</th>
+                <th>Campos</th>
+                <th>Vistas</th>
+                <th>Traer relacionadas</th>
+                <th>Pertenece al módulo</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="tdFormTableButton">
+        <label>Vistas para exportar datos: (Se toma en cuenta la query de la vista, no el row limit)</label>
+        <button type="button" id="addListDataRowBtn">Agregar</button>
+    </div>
+    <table id="listDataToExportTable" class="styled-table">
+        <thead>
+            <tr>
+                <th>Lista</th>
+                <th>Vista</th>
+                <th>Campo clave primaria</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="tdFormTableButton">
+        <label>Custom actions:</label><button type="button" id="addCustomActionToExportRowBtn">Agregar</button>
+    </div>
+    <table id="customActionsToExportTable" class="styled-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Dominio</th>
+                <th>URL</th>
+                <th>Ubicación</th>
+                <th>Secuencía</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="tdFormTableButton">
+        <label>Dependencias:</label><button type="button" id="addDependencyRowBtn">Agregar</button>
+    </div>
+    <table id="dependenciesToExportTable" class="styled-table">
+        <thead>
+            <tr>
+                <th>Paquete</th>
+                <th>Versión</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="tdFormTableButton">
+        <label>Archivos:</label>
+        <input type="file" id="zipFilePackageInput"
+            accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed">
+        <button type="button" id="addZipFilePackageRowBtn">Agregar</button>
+    </div>
+    <table id="filesToExportTable" class="styled-table">
+        <thead>
+            <tr>
+                <th>Archivo .zip</th>
+                <th>
+                    <div style="display: flex;justify-content: space-between;">
+                        <div>Contiene</div>
+                        <div>Utiliza loader</div>
+                    </div>
+                </th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="tdFormTableButton">
+        <button type="button" id="generatePackageBtn">Generar paquete</button>
+    </div>
+</div>
+
+<div id="packageUpdaterContainer" style="display:none;">
+    <div id="currentSitePackagesTableContainer">
+        <div class="tdFormTableButton" style="width: 100%;">
+            <label>Paquetes instalados:</label>
+            <input type="file" id="addPackageFileInput"
+                accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed">
+            <button type="button" id="addPackageToSiteBtn">Agregar</button>
+        </div>
+        <table id="currentSitePackagesTable" class="styled-table" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Versión instalada</th>
+                    <th>Log</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="packageUpdaterLogConsoleContainer">
+        <div id="packageUpdaterLogConsoleSpinner">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="packageUpdaterLogConsole">
+
+        </div>
+    </div>
+</div>
+
+<div id="customActionHandlerContainer" style="display:none;">
+    <table id="customActionHandlerTable" class="styled-table" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Dominio</th>
+                <th>URL</th>
+                <th>Ubicación</th>
+                <th style="width:60px">Secuencía</th>
+                <th style="text-align: center;">Acción<button type="button" id="addCustomActionRowFormBtn"
+                        style="padding: 4px 7px;">Agregar</button></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
